@@ -1,0 +1,45 @@
+\documentclass[a4paper,oneside,11pt]{article}
+
+\usepackage[utf8]{inputenc} % input encoding
+\usepackage[T1]{fontenc} % font encoding
+
+\usepackage{graphicx} %to include images/graphics
+\usepackage{amsmath,amssymb} %better math type setting
+\usepackage{listings} %for source code snippets
+\usepackage{textcomp} %for upquote
+\usepackage{xcolor} % nice colors (for source code)
+
+\usepackage{biblatex}
+\addbibresource{mybibliography.bib}
+
+
+\renewcommand{\ttdefault}{pcr} % nicer font for source code
+
+% an example configuration of the 'listings' package
+\lstset{basicstyle=\ttfamily, 
+        keywordstyle=\color{purple}\ttfamily,
+        commentstyle=\color{gray}\ttfamily,
+        stringstyle=\color{orange}\ttfamily,
+        captionpos=b,
+        float=tb,
+        upquote=true,
+}
+
+%
+% The actual document starts here
+%
+\begin{document}
+
+\input{frontpage}
+
+\newpage
+
+\input{assignment.tex}
+
+%\appendix
+
+% Appendix chapter in 'chap-appendix.tex'
+%\input{appendix}
+
+\printbibliography
+\end{document}
